@@ -110,6 +110,13 @@ echo "TAVILY_API_KEY=\"$TAVILY_API_KEY\"" >> module-4/studio/.env
 Module 1
 Video 1 Motivation:
 
-> It helps you build systems where AIs can think through steps, make their own decisions, and even adapt when things change. Instead of a straight, one-way process, it gives your AI the power to move, loop back, and explore multiple paths just like humans do.datacouch​LangChain_Academy_-Introduction_to_LangGraph-_Motivation.pdf​
+> It helps you make systems where AIs can think through steps, make their own decisions, and even adapt when things change. Instead of a straight, one-way process, it gives your AI the power to move, loop back, and explore multiple paths just like humans do.datacouch​LangChain_Academy_-Introduction_to_LangGraph-_Motivation.pdf​
 
-> It strikes a sweet balance between structure and freedom , you can still control critical parts of how your AI works, but let it handle dynamic, unpredictable scenarios on its own. This makes your agents smart, efficient, and ready for real world tasks
+> It strikes a good git balance between structure and freedom , you can still control critical parts of how your AI works, but let it handle dynamic, unpredictable scenarios on its own. This makes your agents smart, efficient, and ready for real world tasks
+
+Video 2 
+>I learnt how a LangGraph is built using connected nodes and edges, where data (the state) moves from one step to the next.
+
+>I saw how to add a conditional edge so the graph can take different paths depending on a rule — like choosing between two nodes.
+
+>Finally, I ran the graph to see how it updates the state at each step, giving different results each time based on the path it takes.
