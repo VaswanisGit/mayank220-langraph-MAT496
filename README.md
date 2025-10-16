@@ -121,16 +121,27 @@ Video 2 SimpleGraph
 
 >Finally, I ran the graph to see how it updates the state at each step, giving different results each time based on the path it takes.
 
-Video 3 Chain
+Video 3 Langsmith Studio
+>I got a quick intro on how to use langsmith studio. 
+> It helps with the visualisation of what i just created
+
+Video 4 Chain
 >I learned how the reducer function manages the flow of information by updating and combining different parts of the conversation as the chain progresses.
 
 >I understood how the message state maintains context across multiple exchanges, ensuring the model remembers previous inputs and responses within the chat flow.
 
 >Created a divide tool.
 
-Video 4 Router
+Video 5 Router
 >I learnt about the Router concept in LangGraph, where a chat model can decide whether to respond directly in natural language or to call a specific tool based on the user’s input. This taught me how an AI agent can dynamically manage control flow depending on the situation.
 
 >I learnt how to build conditional logic in graphs by using nodes and conditional edges to control the flow routing between a tool-calling node and a response node depending on what the model outputs.
 
 >I learnt how to implement tools in LangChain, such as creating a simple function like multiply(a, b) and binding it to the model using llm.bind_tools(). This showed me how to make a chat model interact intelligently with tools as part of its reasoning process.
+
+Video 6 Agents
+>Saw a dynamic router architecture where the chat model decides whether to respond in natural language or call a tool based on user input, enabling flexible control flow in LangGraph.
+
+>Saw the implementation conditional edges and nodes to manage execution flow, routing between assistant and tool nodes, forming a loop that allows the model to call multiple tools sequentially or respond directly.
+
+>Learnt the Integratation multiple simple math tools (add, multiply, divide) with LangChain through llm.bind_tools(), enabling the model to invoke tools in sequence and reason about their outputs using a ReAct-like agent architecture.
