@@ -145,3 +145,8 @@ Video 6 Agents
 >Saw the implementation conditional edges and nodes to manage execution flow, routing between assistant and tool nodes, forming a loop that allows the model to call multiple tools sequentially or respond directly.
 
 >Learnt the Integratation multiple simple math tools (add, multiply, divide) with LangChain through llm.bind_tools(), enabling the model to invoke tools in sequence and reason about their outputs using a ReAct-like agent architecture.
+
+Video 7 Agent Memory
+>I learnt how to build an AI agent with memory that can remember past interactions and use that memory to improve future responses and decision-making.
+
+>I learnt that an agent works through a continuous cycle of acting, observing, and reasoning — where it calls tools, analyzes results, and decides what to do next — and that adding memory makes this process more intelligent and context-aware.
