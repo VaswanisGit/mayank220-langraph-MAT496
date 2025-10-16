@@ -150,3 +150,14 @@ Video 7 Agent Memory
 >I learnt how to build an AI agent with memory that can remember past interactions and use that memory to improve future responses and decision-making.
 
 >I learnt that an agent works through a continuous cycle of acting, observing, and reasoning — where it calls tools, analyzes results, and decides what to do next — and that adding memory makes this process more intelligent and context-aware.
+
+
+Video 7 Deployment
+>I learnt how to deploy an agent with memory, which can act, observe, reason, and persist its state — allowing it to manage long-running or interrupted conversations effectively.
+
+>I learnt about the main components of LangGraph, such as:
+-The LangGraph library for creating agent workflows,
+-The LangGraph API for handling asynchronous tasks  and maintaining state, and
+-LangGraph Cloud for hosting, monitoring, and tracing deployed graphs.
+
+>I learnt how to use LangGraph Studio and SDK to build, test, and interact with agents locally and in the cloud, enabling smooth deployment and real-time debugging of AI workflows.
