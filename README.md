@@ -114,16 +114,23 @@ Video 1 Motivation:
 
 > It strikes a good git balance between structure and freedom , you can still control critical parts of how your AI works, but let it handle dynamic, unpredictable scenarios on its own. This makes your agents smart, efficient, and ready for real world tasks
 
-Video 2 
+Video 2 SimpleGraph
 >I learnt how a LangGraph is built using connected nodes and edges, where data (the state) moves from one step to the next.
 
 >I saw how to add a conditional edge so the graph can take different paths depending on a rule — like choosing between two nodes.
 
 >Finally, I ran the graph to see how it updates the state at each step, giving different results each time based on the path it takes.
 
-Video 3 
+Video 3 Chain
 >I learned how the reducer function manages the flow of information by updating and combining different parts of the conversation as the chain progresses.
 
 >I understood how the message state maintains context across multiple exchanges, ensuring the model remembers previous inputs and responses within the chat flow.
 
 >Created a divide tool.
+
+Video 4 Router
+>I learnt about the Router concept in LangGraph, where a chat model can decide whether to respond directly in natural language or to call a specific tool based on the user’s input. This taught me how an AI agent can dynamically manage control flow depending on the situation.
+
+>I learnt how to build conditional logic in graphs by using nodes and conditional edges to control the flow routing between a tool-calling node and a response node depending on what the model outputs.
+
+>I learnt how to implement tools in LangChain, such as creating a simple function like multiply(a, b) and binding it to the model using llm.bind_tools(). This showed me how to make a chat model interact intelligently with tools as part of its reasoning process.
