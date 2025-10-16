@@ -120,3 +120,10 @@ Video 2
 >I saw how to add a conditional edge so the graph can take different paths depending on a rule — like choosing between two nodes.
 
 >Finally, I ran the graph to see how it updates the state at each step, giving different results each time based on the path it takes.
+
+Video 3 
+>I learned how the reducer function manages the flow of information by updating and combining different parts of the conversation as the chain progresses.
+
+>I understood how the message state maintains context across multiple exchanges, ensuring the model remembers previous inputs and responses within the chat flow.
+
+>Created a divide tool.
