@@ -168,3 +168,11 @@ VIDEO 2: STATE-REDUCERS
 >Understood that I can create custom reducers to handle special cases, like when inputs are None, ensuring smoother and more flexible state updates.
 
 >Discovered that LangGraph’s built-in add_messages reducer makes managing chat histories easier by automatically appending, updating, or removing messages based on their IDs.
+
+VIDEO 3 : MULTIPLE SCHEMA
+
+> Explored how private states enable nodes to exchange internal information while keeping those details hidden from the user in the final output.
+
+> Saw that type hints determine which parts of the state each node reads from or writes to, clearly defining the data flow within the graph.
+
+>Noted that by defining different input and output schemas, we can filter what enters and leaves the graph, ensuring the user only interacts with essential information.
