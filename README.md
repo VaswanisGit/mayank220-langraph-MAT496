@@ -197,3 +197,13 @@ VIDEO 5 Chatbot w/ Summarizing Messages and Memory
 > We can delete older messages (keeping, for example, the last two) after summarization, reducing token usage and keeping the conversation manageable.
 
 > Summaries are triggered based on the number of messages (for instance, after six), allowing the assistant to handle long-running multi-turn conversations without losing context.
+
+VIDEO 6 Chatbot w/ Summarizing Messages and External Memory
+
+>You learned how to build a chatbot that can carry on long conversations by remembering past messages and summarizing older ones, which helps keep things efficient.
+
+> An in-memory checkpointer works for a single session, but using databases like SQLite or Postgres lets your chatbot “remember” conversations even if you restart your notebook.
+
+> The chatbot can automatically create summaries after a certain number of messages (like six), so it keeps the important info without getting bogged down by old messages.
+
+> LangGraph Studio makes it easy to manage multiple conversation threads with built-in persistence, letting you pick up right where you left off.
