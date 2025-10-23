@@ -152,3 +152,11 @@ Video 7 Agent Memory
 >I learnt that an agent works through a continuous cycle of acting, observing, and reasoning — where it calls tools, analyzes results, and decides what to do next — and that adding memory makes this process more intelligent and context-aware.
 
 
+MODULE 2
+VIDEO 1: STATE-SCHEMA
+
+>Explored different ways to define and manage state in LangGraph, and I saw how Pydantic gives stronger, real-time validation compared to TypedDict and dataclasses.
+
+>learned how the graph can branch based on the state (like deciding mood), and I even expanded it by adding a “neutral” path to handle more realistic outcomes.
+
+>I now understand that enforcing valid values in state isn’t just theory—Pydantic actively prevents bad data from slipping through, making the agent more reliable in real-world scenarios.
