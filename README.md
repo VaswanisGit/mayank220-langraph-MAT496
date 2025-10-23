@@ -187,3 +187,13 @@ VIDEO 4 TRIM AND FILTER MESSAGES
 >Feeding the model selectively: Even if we maintain the full chat history, we can choose to run the model on just the latest message. This keeps memory intact but reduces token usage.
 
 >Trimming by token size: With trim_messages, we can control how much of the conversation is sent to the LLM—either only the latest message or a partial slice of prior messages—to stay within token limits
+
+VIDEO 5 Chatbot w/ Summarizing Messages and Memory
+
+> We can use an LLM to automatically produce a running summary of a conversation, compressing older messages while preserving important information.
+
+> By storing conversation state with a summary key and using a MemorySaver checkpointer, we can maintain conversation history across multiple graph invocations.
+
+> We can delete older messages (keeping, for example, the last two) after summarization, reducing token usage and keeping the conversation manageable.
+
+> Summaries are triggered based on the number of messages (for instance, after six), allowing the assistant to handle long-running multi-turn conversations without losing context.
