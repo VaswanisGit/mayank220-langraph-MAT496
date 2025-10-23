@@ -160,3 +160,11 @@ VIDEO 1: STATE-SCHEMA
 >learned how the graph can branch based on the state (like deciding mood), and I even expanded it by adding a “neutral” path to handle more realistic outcomes.
 
 >I now understand that enforcing valid values in state isn’t just theory—Pydantic actively prevents bad data from slipping through, making the agent more reliable in real-world scenarios.
+
+VIDEO 2: STATE-REDUCERS
+
+>Learned that reducers in LangGraph control how state updates happen — instead of overwriting values, they can merge or append data, which is crucial when multiple nodes update the same key in parallel.
+
+>Understood that I can create custom reducers to handle special cases, like when inputs are None, ensuring smoother and more flexible state updates.
+
+>Discovered that LangGraph’s built-in add_messages reducer makes managing chat histories easier by automatically appending, updating, or removing messages based on their IDs.
