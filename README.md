@@ -176,3 +176,14 @@ VIDEO 3 : MULTIPLE SCHEMA
 > Saw that type hints determine which parts of the state each node reads from or writes to, clearly defining the data flow within the graph.
 
 >Noted that by defining different input and output schemas, we can filter what enters and leaves the graph, ensuring the user only interacts with essential information.
+
+
+VIDEO 4 TRIM AND FILTER MESSAGES
+
+>Handling long chats smartly: When conversations get long, sending all messages to the LLM can be slow and costly. We need ways to manage which messages are actually sent.
+
+>Keeping only what matters: Using a filter_messages approach, we can drop older messages and keep just the recent ones, so the LLM focuses on the most relevant context.
+
+>Feeding the model selectively: Even if we maintain the full chat history, we can choose to run the model on just the latest message. This keeps memory intact but reduces token usage.
+
+>Trimming by token size: With trim_messages, we can control how much of the conversation is sent to the LLM—either only the latest message or a partial slice of prior messages—to stay within token limits
