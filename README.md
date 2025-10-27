@@ -240,3 +240,17 @@ LESSON 3:EDITING STATE AND HUMAN FEEDBACK
 3.Studio and the API both make editing simple. In LangGraph Studio, it’s as easy as forking a thread or adding a manual interrupt; via the API, you can fetch, modify, and resume from any state checkpoint in just a few lines of code.
 
 4.Human feedback can be built right into the workflow. By adding a small “human feedback” node, users can directly inject input or corrections into the graph at specific points — giving complete, interactive control over how the agent behaves.
+
+LESSON 4 DYNAMIC BREAKPOINTS
+
+1.Dynamic breakpoints let the graph pause on its own.
+Instead of you setting a manual stop, the graph can decide to pause when something specific happens — like when the input is too long — using NodeInterrupt.
+
+2.When it hits the condition, everything stops.
+The graph halts right there until you change something. It won’t move ahead unless the state is updated, which makes it perfect for debugging or waiting for feedback.
+
+3.A quick state update gets things moving again.
+Once you tweak the input (like changing “Hello world” to “Hi”), you can resume, and the graph continues normally from where it stopped.
+
+4.You can do all this easily through the API too.
+With LangGraph Studio or the SDK, you can see where the graph paused, adjust the state, and continue — all without restarting the entire process.
