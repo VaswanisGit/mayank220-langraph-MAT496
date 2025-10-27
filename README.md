@@ -219,3 +219,14 @@ LESSON 1: Streaming and Interruption
 3.With .astream_events(), it becomes possible to stream live LLM tokens and watch responses appear token by token.
 
 4.Through the LangGraph API, streaming also provides real-time access to messages, tool calls, and final outputs from running graphs.
+
+
+LESSON 2: BREAKPOINTS
+
+1.Streaming lets us stay in control — it gives a way to pause a running graph, check what’s happening, and decide whether to let it continue, making it perfect for cases where human approval is needed before taking action.
+
+2.Breakpoints act like pause buttons — by adding interrupt_before or interrupt_after, we can stop the graph right before (or after) certain steps, such as when a tool is about to run, and review things before moving on.
+
+3.We can easily pick up where we left off — using commands like graph.get_state() or graph.stream(None, thread_id), we can see the current state of the graph and resume it from the exact same point.
+
+4.Breakpoints can be added in multiple ways — they can be set directly in the code when building the graph or passed dynamically through the API, giving flexibility in how and when we use them.
