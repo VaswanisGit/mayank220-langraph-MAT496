@@ -207,3 +207,15 @@ VIDEO 6 Chatbot w/ Summarizing Messages and External Memory
 > The chatbot can automatically create summaries after a certain number of messages (like six), so it keeps the important info without getting bogged down by old messages.
 
 > LangGraph Studio makes it easy to manage multiple conversation threads with built-in persistence, letting you pick up right where you left off.
+
+
+MODULE 3 
+LESSON 1: Streaming and Interruption
+
+1.Streaming in LangGraph enables real-time visibility into how a chatbot’s state evolves as each node executes.
+
+2.The distinction between “updates” and “values” shows two perspectives — updates capture only the latest change, while values reflect the full conversation or state at that point.
+
+3.With .astream_events(), it becomes possible to stream live LLM tokens and watch responses appear token by token.
+
+4.Through the LangGraph API, streaming also provides real-time access to messages, tool calls, and final outputs from running graphs.
