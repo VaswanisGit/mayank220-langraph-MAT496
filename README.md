@@ -254,3 +254,17 @@ Once you tweak the input (like changing “Hello world” to “Hi”), you can 
 
 4.You can do all this easily through the API too.
 With LangGraph Studio or the SDK, you can see where the graph paused, adjust the state, and continue — all without restarting the entire process.
+
+LESSON 5 TIME TRAVEL
+
+1.Debugging made easy with time travel – LangGraph lets you revisit and inspect any previous checkpoint of your graph, making debugging smooth and intuitive.
+
+2.Automatic checkpoints for every step – Each run saves a snapshot of the graph’s state, so you can replay, review, or fork from any point.
+
+3.Fork and experiment freely – You can branch off from an old checkpoint, modify inputs or logic, and test new outcomes without rebuilding the whole graph.
+
+4.Reducers control how updates merge – They decide whether new messages or data append, replace, or combine with the existing state.
+
+5.Seamless editing with Studio – LangGraph Studio provides an easy visual interface to pause, tweak, and resume graphs directly — no code reruns needed.
+
+6.Parallel execution boosts performance – Multiple nodes (like web search and Wikipedia tools) can run together, merge results, and create faster, smarter responses.
