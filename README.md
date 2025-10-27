@@ -230,3 +230,13 @@ LESSON 2: BREAKPOINTS
 3.We can easily pick up where we left off — using commands like graph.get_state() or graph.stream(None, thread_id), we can see the current state of the graph and resume it from the exact same point.
 
 4.Breakpoints can be added in multiple ways — they can be set directly in the code when building the graph or passed dynamically through the API, giving flexibility in how and when we use them.
+
+LESSON 3:EDITING STATE AND HUMAN FEEDBACK
+
+1.Breakpoints aren’t just for pausing — they let us edit live graphs. Once a graph stops, we can directly view and modify its state before continuing, making it easy to adjust inputs or correct actions mid-run.
+
+2.State updates give full control over what’s happening. Using graph.update_state(), we can change messages or values, either by adding new ones or overwriting existing ones depending on their IDs.
+
+3.Studio and the API both make editing simple. In LangGraph Studio, it’s as easy as forking a thread or adding a manual interrupt; via the API, you can fetch, modify, and resume from any state checkpoint in just a few lines of code.
+
+4.Human feedback can be built right into the workflow. By adding a small “human feedback” node, users can directly inject input or corrections into the graph at specific points — giving complete, interactive control over how the agent behaves.
