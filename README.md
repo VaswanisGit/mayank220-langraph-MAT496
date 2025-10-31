@@ -268,3 +268,14 @@ LESSON 5 TIME TRAVEL
 5.Seamless editing with Studio – LangGraph Studio provides an easy visual interface to pause, tweak, and resume graphs directly — no code reruns needed.
 
 6.Parallel execution boosts performance – Multiple nodes (like web search and Wikipedia tools) can run together, merge results, and create faster, smarter responses.
+
+
+MODULE 4
+
+LESSON 1: PARARRELIZATION
+
+When multiple nodes run in parallel and try to update the same key or channel in the state, we need a reducer to manage those simultaneous updates safely. During a fan-out operation, all branches must complete their state changes before the graph fans back in and the next node continues updating the state.
+
+We can also control the order of updates within the same step using a custom reducer. Parallelization allows us to pull information from different sources at once, combine it into a specific state key (for example, to gather context or data), and then use that aggregated information later—such as for generating an LLM response by passing along the checkpoint ID.
+
+When we use update_state, the add_messages reducer will append a new message unless we specify an ID—in that case, it overwrites the existing one. Each time we call update_state, we create new forked checkpoints in the thread’s state history.
