@@ -279,3 +279,11 @@ When multiple nodes run in parallel and try to update the same key or channel in
 We can also control the order of updates within the same step using a custom reducer. Parallelization allows us to pull information from different sources at once, combine it into a specific state key (for example, to gather context or data), and then use that aggregated information later—such as for generating an LLM response by passing along the checkpoint ID.
 
 When we use update_state, the add_messages reducer will append a new message unless we specify an ID—in that case, it overwrites the existing one. Each time we call update_state, we create new forked checkpoints in the thread’s state history.
+
+LESSON 2: SUB GRAPHS
+
+Subgraphs let us manage separate states for different sections of a graph, which is especially useful when working with multi-agent systems.
+
+Overlapping keys act as bridges — they let the main (entry) graph exchange information with its subgraphs, and also allow subgraphs to send data back to the main graph.
+
+When defining the overall state for the entry graph, we don’t need a reducer for cleaned_logs since that key isn’t included in the output schema of any subgraph.
