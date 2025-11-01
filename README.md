@@ -287,3 +287,15 @@ Subgraphs let us manage separate states for different sections of a graph, which
 Overlapping keys act as bridges — they let the main (entry) graph exchange information with its subgraphs, and also allow subgraphs to send data back to the main graph.
 
 When defining the overall state for the entry graph, we don’t need a reducer for cleaned_logs since that key isn’t included in the output schema of any subgraph.
+
+LESSON 3 : MAP REDUCE
+
+MapReduce is basically a smart way to break big tasks into smaller pieces and handle them efficiently in parallel. It works in two main steps — the map phase, where we split a large job into smaller subtasks and run them at the same time, and the reduce phase, where we gather and combine all those results into one final output.
+
+In our setup, we’re using two schemas: Subjects, which holds a list of related topics, and BestFacts, which stores the ID or index of the best fact chosen from the results.
+
+The OverallState keeps track of the main topic given by the user, the list of subjects, and a growing list of facts (thanks to a reducer that keeps appending new ones). We fan out into several nodes that each generate facts for different subjects and then bring all those results together to pick the best one.
+
+The Send API helps in two ways — first, it automatically handles any number of subjects by creating a generate_fact node for each one, and second, it lets us pass in flexible types of data.
+
+When you view the graph in Studio, you can see a continue_to_fact conditional edge. It takes the list of subjects and triggers separate generate_fact runs for each, working on them all at once before pulling everything back together.
