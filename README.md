@@ -299,3 +299,18 @@ The OverallState keeps track of the main topic given by the user, the list of su
 The Send API helps in two ways — first, it automatically handles any number of subjects by creating a generate_fact node for each one, and second, it lets us pass in flexible types of data.
 
 When you view the graph in Studio, you can see a continue_to_fact conditional edge. It takes the list of subjects and triggers separate generate_fact runs for each, working on them all at once before pulling everything back together.
+
+
+LESSON 4: RESEARCH ASSISTANT
+
+source selection,giving the system access to arbitrary sources using web serach tools; a planning process where we take a topic given by the user, break that up into some set of subtopics and assign an AI analyst to each subtopic; orchestrating a dialogue between each of our analyst and an and an expert that has access to the sources; using map reduce to bring the resuts together at the end;
+
+we create some analyst based upon user provided topic, human feedback refines them, then we kick of research automation where each analyst conducts research in parallel with an expert that has access to external sources then the reduce phase brings all those independent research together into final report;
+
+when we run our graph, we pause at human feedback node, await feedback and if we pass in any feedback, we'll go back and recreate analysts and start again;
+
+the analyst persona is concatenation of the analysts, identity and goals, we pass that in so that when we're creating questions, the analyst knows who they are and they know what their perspective is;
+
+when the question goes to search Wikipedia and search web in the graph, we take the message history and distill it into a high quality seach query and then hit our sources with that search query and return results to context;
+
+we add control to parallelize all the interviews for all of our analysts; REPHRASE WITHOUT CHANING THE MEANING AND GIVE HUMANISE VERSION LIKE IT ALREADY IS
